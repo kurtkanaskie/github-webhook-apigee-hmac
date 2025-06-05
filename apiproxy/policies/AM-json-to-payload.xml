@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage continueOnError="false" enabled="true" name="AM-json-to-payload">
+  <AssignVariable>
+    <Name>payload</Name>
+    <Ref>request.content</Ref>
+  </AssignVariable>
+  <AssignVariable>
+    <Name>input_hmac_value</Name>
+    <Template>{replaceFirst(request.header.x-hub-signature-256,'sha256=','')}</Template>
+  </AssignVariable>
+  <IgnoreUnresolvedVariables>false</IgnoreUnresolvedVariables>
+</AssignMessage>

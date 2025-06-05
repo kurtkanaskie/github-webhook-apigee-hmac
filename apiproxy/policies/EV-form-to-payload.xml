@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ExtractVariables continueOnError="false" enabled="true" name="EV-form-to-payload">
+  <!-- example
+  x-hub-signature	sha1=64d167d04a362ae66b0c6468b598ddfc308f36c8
+  x-hub-signature-256	sha256=cee86c7c933e282d101c68da50435adefae99e37eea6f60519877c69af0c3923
+  -->
+  <Header name="X-Hub-Signature-256">
+    <Pattern ignoreCase="true">sha256={input_hmac_value}</Pattern>
+  </Header>
+  <FormParam name="payload">
+    <Pattern>{payload}</Pattern>
+  </FormParam>
+  <IgnoreUnresolvedVariables>false</IgnoreUnresolvedVariables>
+</ExtractVariables>

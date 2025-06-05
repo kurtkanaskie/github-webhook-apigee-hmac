@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ExtractVariables continueOnError="false" enabled="true" name="EV-payload">
+  <JSONPayload>
+    <Variable name="repository">
+      <JSONPath>$.repository.name</JSONPath>
+    </Variable>
+  </JSONPayload>
+  <Source>payload</Source>
+  <IgnoreUnresolvedVariables>false</IgnoreUnresolvedVariables>
+</ExtractVariables>

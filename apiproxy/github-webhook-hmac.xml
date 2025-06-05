@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<APIProxy revision="1" name="github-webhook-hmac">
+  <DisplayName/>
+  <Description>Web Hook for Git Repos (github-webhook--apigee-hmac) - supports both forms of requests x-www-form-urlencoded or json</Description>
+  <CreatedAt>1749146513254</CreatedAt>
+  <LastModifiedAt>1749146943811</LastModifiedAt>
+  <BasePaths>/github-webhook-hmac</BasePaths>
+  <Policies>
+    <Policy>HMAC-verify</Policy>
+    <Policy>KV-hmac-secret</Policy>
+    <Policy>EV-payload</Policy>
+    <Policy>AM-json-to-payload</Policy>
+    <Policy>EV-form-to-payload</Policy>
+    <Policy>AM-debug</Policy>
+  </Policies>
+  <ProxyEndpoints>
+    <ProxyEndpoint>default</ProxyEndpoint>
+  </ProxyEndpoints>
+</APIProxy>
